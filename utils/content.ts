@@ -5,14 +5,14 @@ export const programmes = [
     icon: 'tool',
     title: 'Trade and vocational training',
     short: 'Practical, employable skills — carpentry, tailoring, welding, agriculture and more.',
-    body: 'Equip juveniles and incarcerated individuals with practical, employable skills through structured vocational programs such as carpentry, tailoring, make up artist, welding, agriculture, and other locally relevant trades. These programs should be designed to improve self-reliance, reduce recidivism, and create pathways to sustainable livelihoods after release.'
+    body: 'Equip young people with practical, employable skills through structured vocational programmes such as carpentry, tailoring, make-up artistry, welding, agriculture, and other locally relevant trades. Training continues with coaching, tool support, and follow-up after rehabilitation so each participant has a realistic path toward self-reliance.'
   },
   {
     n: '02',
     icon: 'book',
     title: 'Formal schooling access',
     short: 'Literacy, primary and secondary completion, and exam registration inside custody.',
-    body: 'Open and sustain routes back into formal education — basic literacy and numeracy, primary and secondary completion, and registration for national examinations — so that no young person leaves custody without a school record to build on.'
+    body: 'Open and sustain routes back into formal education through tutoring, literacy and numeracy support, primary and secondary completion, and registration for national examinations. The goal is for every young person to leave custody or rehabilitation with a school record and learning plan they can build on.'
   },
   {
     n: '03',
@@ -26,21 +26,21 @@ export const programmes = [
     icon: 'users',
     title: 'Leadership & community-building',
     short: 'Mentorship circles, life skills, and youth-led projects that build responsibility.',
-    body: 'Develop confidence, responsibility, and peer leadership through mentorship circles, life-skills sessions, and youth-led projects inside the facility and in the community after release.'
+    body: 'Develop confidence, responsibility, and peer leadership through mentorship circles, life-skills sessions, seminars, and youth-led projects inside facilities and in the community after release.'
   },
   {
     n: '05',
     icon: 'heart',
     title: 'Rehabilitation & social reintegration',
     short: 'Counselling, family mediation, and case follow-up through release and after.',
-    body: 'Support the return home with counselling, family mediation, and case follow-up, so that release becomes a transition into community life rather than a return to isolation.'
+    body: 'Support the return home with counselling, family mediation, transitional shelter planning, and case follow-up. Bridge of Hope is also working toward a rehabilitation centre for young people who have no safe place to go after release, so reintegration can begin with stability instead of isolation.'
   },
   {
     n: '06',
     icon: 'scale',
     title: 'Advocacy for juvenile & prison welfare reform',
     short: 'Working with authorities and courts on humane, age-appropriate custody.',
-    body: 'Work with correctional authorities, courts, and policymakers on humane conditions, age-appropriate custody, and faster case resolution for young people in detention.'
+    body: 'Work with correctional authorities, courts, families, and policymakers on humane conditions, age-appropriate custody, and faster case resolution for young people in detention. Where appropriate and legally permitted, we help eligible non-violent young offenders access bail or release support from juvenile centres.'
   },
   {
     n: '07',
