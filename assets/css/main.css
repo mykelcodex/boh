@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* =============================================================
+   Bridge of Hope — design tokens as Tailwind theme variables.
+   Derived from the Orevah design system, re-pigmented to the
+   Bridge of Hope palette (deep green + gold on warm neutrals).
+   Every token below is usable as a utility: bg-green-700,
+   text-gold-ink, border-line, shadow-e3, font-serif, ...
+   ============================================================= */
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Brand green */
+  --color-green-50: #F2F7F5;
+  --color-green-100: #DCEAE5;
+  --color-green-200: #B9D5CB;
+  --color-green-500: #1E5C4A;
+  --color-green-600: #17493B;
+  --color-green-700: #10352B;
+  --color-green-800: #0B2620;
+
+  /* Gold — giving and accents only */
+  --color-gold-100: #FBEEDA;
+  --color-gold-500: #E8A33D;
+  --color-gold-600: #C9861F;
+  --color-gold-ink: #8A5A12;
+  --color-gold-contrast: #241B06;
+
+  /* Warm neutral scale */
+  --color-sand-50: #FAF8F5;
+  --color-sand-100: #F4F1EC;
+  --color-sand-200: #E7E2D9;
+  --color-sand-300: #D8D2C7;
+  --color-sand-400: #A39C90;
+  --color-sand-500: #6B6459;
+  --color-sand-700: #443F38;
+  --color-sand-900: #1C1A16;
+
+  /* Semantic foreground / border */
+  --color-ink: #0A211C;
+  --color-body: #443F38;
+  --color-muted: #6B6459;
+  --color-line: #E7E2D9;
+  --color-line-strong: #D8D2C7;
+
+  --shadow-e1: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-e2: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-e3: 0 4px 12px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(15, 23, 42, 0.04);
+  --shadow-e4: 0 12px 32px rgba(15, 23, 42, 0.12), 0 4px 8px rgba(15, 23, 42, 0.06);
+  --shadow-field: inset 0 0 0 1px rgba(15, 23, 42, 0.06);
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-body);
+    background: #fff;
+  }
+  a {
+    color: var(--color-green-600);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: color 120ms var(--ease-standard);
+  }
+  a:hover { color: var(--color-green-700); }
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 92, 74, 0.35);
+    border-radius: 2px;
+  }
+}
+
+/* A small set of repeated patterns. Everything else is utilities. */
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-[1200px] px-4 sm:px-6; }
+  .section { @apply py-16 md:py-24; }
+
+  .eyebrow { @apply font-sans text-xs font-semibold uppercase tracking-[0.14em] text-gold-ink; }
+  .h-display { @apply font-serif font-semibold text-[clamp(34px,7vw,58px)] leading-[1.08] tracking-[-0.02em] text-ink text-balance; }
+  .h-section { @apply font-serif font-semibold text-[clamp(26px,5.4vw,38px)] leading-[1.2] tracking-[-0.02em] text-ink text-balance; }
+  .lead { @apply text-[clamp(17px,3.6vw,20px)] leading-[1.55] text-body text-pretty; }
+
+  .card { @apply flex flex-col rounded-md border border-line bg-white p-6 shadow-e1; }
+  .card-link { @apply transition-shadow duration-200 hover:shadow-e3; }
+
+  .btn { @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-[4px] border border-transparent px-6 py-4 font-sans text-base leading-none transition-colors duration-150; }
+  .btn-gold { @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-[4px] border border-transparent bg-gold-500 px-6 py-4 font-sans text-base font-bold leading-none text-gold-contrast transition-colors duration-150 hover:bg-gold-600; }
+  .btn-green { @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-[4px] border border-transparent bg-green-500 px-6 py-4 font-sans text-base font-semibold leading-none text-white transition-colors duration-150 hover:bg-green-600; }
+  .btn-outline-light { @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-[4px] border border-white/45 px-6 py-4 font-sans text-base font-semibold leading-none text-white transition-colors duration-150 hover:bg-white/10; }
+  .btn-secondary { @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-[4px] border border-line-strong bg-white px-6 py-4 font-sans text-base font-semibold leading-none text-green-700 transition-colors duration-150 hover:bg-sand-100; }
+
+  .field { @apply w-full rounded-[4px] border border-line-strong bg-white px-3.5 py-3 font-sans text-[15px] text-ink shadow-field placeholder:text-sand-400; }
+  .field-label { @apply mb-1.5 block text-[13px] font-semibold text-ink; }
+}
