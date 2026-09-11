@@ -36,14 +36,14 @@ Tailwind 4 is wired through `@tailwindcss/vite` — there is no `tailwind.config
 All design tokens live in the `@theme` block of `assets/css/main.css` and are
 available as ordinary utilities:
 
-| Token group | Utilities |
-|---|---|
-| Brand green | `bg-green-500` … `bg-green-800`, `text-green-200` |
-| Gold | `bg-gold-500`, `text-gold-ink`, `bg-gold-100` |
-| Warm neutrals | `bg-sand-50` … `text-sand-500` |
-| Semantic | `text-ink`, `text-body`, `text-muted`, `border-line` |
-| Elevation | `shadow-e1` … `shadow-e4`, `shadow-field` |
-| Type | `font-serif` (Crimson Pro), `font-sans` (Plus Jakarta Sans), `font-mono` |
+| Token group   | Utilities                                                       |
+| ------------- | --------------------------------------------------------------- |
+| Brand green   | `bg-green-500` … `bg-green-800`, `text-green-200`               |
+| Gold          | `bg-gold-500`, `text-gold-ink`, `bg-gold-100`                   |
+| Warm neutrals | `bg-sand-50` … `text-sand-500`                                  |
+| Semantic      | `text-ink`, `text-body`, `text-muted`, `border-line`            |
+| Elevation     | `shadow-e1` … `shadow-e4`, `shadow-field`                       |
+| Type          | `font-serif` (Crimson Pro), `font-sans` (Plus Jakarta Sans), `` |
 
 Repeated patterns are component classes in the same file: `.wrap`, `.section`,
 `.eyebrow`, `.h-display`, `.h-section`, `.lead`, `.card`, `.btn-gold`,

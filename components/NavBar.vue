@@ -5,7 +5,7 @@
   >
     <div class="wrap flex h-[68px] items-center justify-between gap-6">
       <NuxtLink to="/" class="flex items-center gap-2.5 no-underline" aria-label="Bridge of Hope — home">
-        <img src="/assets/boh-mark.png" alt="Bridge of Hope logo" class="block h-[34px] w-auto" />
+        <img src="/images/logo.png" alt="Bridge of Hope logo" class="block h-[34px] w-auto" />
         <span class="whitespace-nowrap font-serif text-xl font-semibold tracking-[-0.01em] text-green-700">Bridge of Hope</span>
       </NuxtLink>
 
