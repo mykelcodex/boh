@@ -4,8 +4,7 @@
       <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <div class="mb-4 flex items-center gap-2.5">
-            <img src="/assets/boh-mark-light.png" alt="" class="block h-8 w-auto" />
-            <span class="font-serif text-xl font-semibold text-white">Bridge of Hope</span>
+            <img src="/images/logo_white.png" alt="Bridge of Hope" class="block h-8 w-auto" />
           </div>
           <p class="mb-5 max-w-[300px] text-[15px] leading-relaxed text-green-200">
             Empowering young people in juvenile centres and correctional facilities across Nigeria — through education, training, and reintegration.
