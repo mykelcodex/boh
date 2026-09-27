@@ -1,10 +1,12 @@
 <template>
   <main>
     <div class="border-b border-line bg-green-50">
-      <div class="wrap max-w-[820px] py-[72px]">
-        <p class="eyebrow mb-4">Contact</p>
-        <h1 class="h-display mb-4">Talk to us</h1>
-        <p class="lead">Partnerships, volunteering, giving, or press — tell us which and we will route your message to the right person.</p>
+      <div class="wrap py-[72px]">
+        <div class="max-w-[820px]">
+          <p class="eyebrow mb-4">Contact</p>
+          <h1 class="h-display mb-4">Talk to us</h1>
+          <p class="lead">Partnerships, volunteering, giving, or press — tell us which and we will route your message to the right person.</p>
+        </div>
       </div>
     </div>
 

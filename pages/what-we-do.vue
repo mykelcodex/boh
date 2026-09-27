@@ -1,15 +1,17 @@
 <template>
   <main>
     <div class="border-b border-line bg-green-50">
-      <div class="wrap max-w-[820px] py-[72px]">
-        <p class="eyebrow mb-4">What we do</p>
-        <h1 class="h-display mb-4">Seven programme areas, one path back</h1>
-        <p class="lead">
+      <div class="wrap py-[72px]">
+        <div class="max-w-[820px]">
+          <p class="eyebrow mb-4">What we do</p>
+          <h1 class="h-display mb-4">Seven programme areas, one path back</h1>
+          <p class="lead">
           Each programme runs inside juvenile centres and correctional
           facilities, and continues after release. Together they cover skills,
           schooling, work, leadership, healing, reform, and the community a
           young person returns to.
-        </p>
+          </p>
+        </div>
       </div>
     </div>
 

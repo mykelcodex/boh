@@ -3,17 +3,17 @@
     <div class="bg-gradient-to-b from-green-50 to-white">
       <div class="wrap grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
         <div>
-          <p class="eyebrow mb-[18px]">Empowering youth, building futures</p>
-          <h1 class="h-display">Empowering Nigeria's youth beyond their past</h1>
+          <p class="eyebrow mb-[18px]">Empowering youth, changing futures</p>
+          <h1 class="h-display">Empowering Youth, Changing Futures</h1>
           <p class="lead mt-5 max-w-[560px]">
-            Access to quality education, vocational training, leadership development, and pathways to meaningful employment — for young people in juvenile centres and correctional facilities across Nigeria.
+            At Bridge of Hope, we believe every young person deserves a second chance. Through mentorship, education, and restorative programmes inside juvenile centres, we provide the tools necessary for rehabilitation and successful reentry into society.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <button class="btn-gold" @click="give.open()">
-              Donate
+              Support a Youth Today
               <AppIcon name="arrowRight" :size="18" />
             </button>
-            <NuxtLink to="/contact" class="btn-green no-underline">Volunteer or partner</NuxtLink>
+            <NuxtLink to="/contact" class="btn-green no-underline">Become a Mentor</NuxtLink>
           </div>
           <div class="mt-9 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
             <span>7 programme areas</span>
@@ -102,18 +102,12 @@
       <div class="wrap">
         <p class="eyebrow mb-3 !text-gold-500">Impact</p>
         <h2 class="h-section !text-white">What the work adds up to</h2>
-        <p class="lead mb-12 mt-3 max-w-[620px] !text-green-200">Placeholder figures — replace each number once reporting is in place.</p>
-        <div class="grid gap-px overflow-hidden rounded-[10px] border border-white/15 bg-white/15 sm:grid-cols-2 lg:grid-cols-4">
+        <p class="lead mb-12 mt-3 max-w-[620px] !text-green-200">The difference our programmes make for young people, year on year.</p>
+        <div class="grid gap-px overflow-hidden rounded-[10px] border border-white/15 bg-white/15 sm:grid-cols-2 lg:grid-cols-3">
           <div v-for="s in stats" :key="s.label" class="bg-green-700 px-7 py-8">
             <div class="font-serif text-[clamp(38px,8vw,52px)] leading-none text-gold-500">{{ s.value }}</div>
             <div class="mt-2.5 text-[15px] text-white">{{ s.label }}</div>
           </div>
-        </div>
-        <div class="mt-8 grid gap-5 md:grid-cols-2">
-          <blockquote v-for="t in testimonials" :key="t.by" class="m-0 rounded-[10px] border border-white/12 bg-white/5 p-8">
-            <p class="m-0 mb-[18px] font-serif text-[clamp(18px,3.8vw,22px)] leading-[1.5] text-white">{{ t.quote }}</p>
-            <footer class="text-sm text-green-200">{{ t.by }}</footer>
-          </blockquote>
         </div>
       </div>
     </section>
@@ -188,15 +182,9 @@ onMounted(() => {
 })
 
 const stats = [
-  { value: '000', label: 'Youth trained' },
-  { value: '000', label: 'Reintegrated after release' },
-  { value: '00', label: 'Facilities served' },
-  { value: '00', label: 'Employer partners' }
-]
-
-const testimonials = [
-  { quote: 'Testimonial placeholder — a short quote from a graduate, in their own words, about what changed after training.', by: 'Name withheld · Programme graduate' },
-  { quote: 'Testimonial placeholder — a quote from a facility officer, mentor, or employer partner about working with Bridge of Hope.', by: 'Name · Role, organisation' }
+  { value: '85%', label: 'Graduates report improved conflict-resolution skills' },
+  { value: '500+', label: 'Youth mentored and supported annually' },
+  { value: '12', label: 'Partnering juvenile facilities across the state' }
 ]
 
 useSeoMeta({

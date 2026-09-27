@@ -8,7 +8,7 @@ export default defineAppConfig({
   contact: {
     addressLine1: "Street address placeholder, Area",
     addressLine2: "City, State, Nigeria",
-    phone: "+234 000 000 0000",
+    phone: "+234 902 556 2798",
     email: "hello@bohreform.org",
     partnersEmail: "partners@bohreform.org",
     volunteerEmail: "volunteer@bohreform.org",
@@ -25,9 +25,9 @@ export default defineAppConfig({
   },
 
   bank: {
-    name: "Bank name placeholder",
-    accountName: "Bridge of Hope",
-    accountNumber: "0000000000",
+    name: "Zenith Bank Plc",
+    accountName: "Bridge of Hope Juvenile Reformation and Capacity Development Initiative",
+    accountNumber: "1313026736",
   },
 
   // Add entries as photos and bios are confirmed; the section hides while empty.

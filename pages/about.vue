@@ -1,16 +1,18 @@
 <template>
   <main>
     <div class="border-b border-line bg-green-50">
-      <div class="wrap max-w-[820px] py-[72px]">
-        <p class="eyebrow mb-4">About us</p>
-        <h1 class="h-display mb-4">
-          Built on the belief that a sentence should not decide a future
-        </h1>
-        <p class="lead">
-          Bridge of Hope is a Nigerian organisation working with young people in
-          juvenile centres and correctional facilities — through education,
-          training, leadership, and the long work of coming home.
-        </p>
+      <div class="wrap py-[72px]">
+        <div class="max-w-[820px]">
+          <p class="eyebrow mb-4">About us</p>
+          <h1 class="h-display mb-4">
+            Built on the belief that a sentence should not decide a future
+          </h1>
+          <p class="lead">
+            Bridge of Hope is a Nigerian organisation working with young people in
+            juvenile centres and correctional facilities — through education,
+            training, leadership, and the long work of coming home.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -74,21 +76,24 @@
           <p class="eyebrow mb-3">Our story</p>
           <h2 class="h-section mb-4">Why we exist</h2>
           <p class="lead mb-4">
-            Founding story placeholder. Two or three paragraphs: what was seen
-            inside a facility, who decided to act, and what the first programme
-            looked like. Written in the first person plural, plainly, without
-            hype.
+            No mistake made at sixteen should decide who a person becomes at
+            thirty. Behind every number on a uniform is a name, a story, and a
+            future still waiting to be written. Bridge of Hope exists to stand in
+            that gap — to remind young people that where they are today is not
+            where they have to end.
           </p>
           <p class="text-base leading-[1.7]">
-            Second paragraph placeholder — the turn: the first cohort, the first
-            release, what it taught the organisation. Roughly 60 to 90 words
-            works well here.
+            Hope is not something you wait for; it is something you hand to
+            someone else. Give a young person a reason to keep going, the skills
+            to rebuild, and someone who believes in them, and they will surprise
+            you every time. We are here because second chances change lives — and
+            because the world is better when no one is written off.
           </p>
         </div>
         <div class="aspect-[4/5] overflow-hidden rounded-[10px] shadow-e3">
           <img
-            src="https://images.unsplash.com/flagged/photo-1579133311477-9121405c78dd?auto=format&fit=crop&w=1200&q=80"
-            alt="Children listening during a classroom lesson in Ibadan, Nigeria"
+            src="/images/hope.png"
+            alt="A young person in a prison uniform gripping cell bars, the word HOPE written across their fingers"
             class="block h-full w-full object-cover"
           />
         </div>
@@ -126,14 +131,15 @@
     <section class="section border-t border-line">
       <div class="wrap">
         <p class="eyebrow mb-3">Partners &amp; affiliations</p>
-        <h2 class="h-section mb-8">Who we work with</h2>
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+        <h2 class="h-section mb-3">Who we work with</h2>
+        <p class="lead mb-8 max-w-[620px]">We partner across the sectors that make rehabilitation and reentry possible — justice, education, mental health, and philanthropy.</p>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
           <div
-            v-for="i in 5"
-            :key="i"
-            class="flex h-[88px] items-center justify-center rounded-md border border-dashed border-line-strong text-[13px] text-muted"
+            v-for="partner in partnerCategories"
+            :key="partner"
+            class="flex h-[88px] items-center justify-center rounded-md border border-dashed border-line-strong px-4 text-center text-[13px] text-muted grayscale opacity-70 transition hover:opacity-100"
           >
-            Partner logo
+            {{ partner }}
           </div>
         </div>
       </div>
@@ -143,6 +149,14 @@
 
 <script setup lang="ts">
 const { team } = useAppConfig();
+
+// Target partner categories — swap each for a monochromatic partner logo once confirmed.
+const partnerCategories = [
+  "Juvenile justice departments & state agencies",
+  "Educational & vocational training institutions",
+  "Community mental health & counselling organisations",
+  "Corporate sponsors & philanthropic foundations",
+];
 
 useSeoMeta({
   title: "About Bridge of Hope — Mission, vision, and values",

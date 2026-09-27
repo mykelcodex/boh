@@ -33,24 +33,19 @@
         </div>
         <div class="px-5 pb-7 pt-6 sm:px-8">
           <p class="mb-5 text-[15px] leading-relaxed">
-            Transfers go directly to the programme account. Send your reference
-            by email and we will confirm receipt and issue a receipt.
+            Transfers go directly to the programme account. Use your name as the
+            reference so we can confirm receipt.
           </p>
           <dl class="grid gap-3.5">
             <div
               v-for="row in rows"
               :key="row.label"
-              class="flex justify-between gap-4 border-b border-line pb-3.5 last:border-0 last:pb-0"
+              class="grid gap-1 border-b border-line pb-3.5 last:border-0 last:pb-0"
             >
               <dt class="text-sm text-muted">{{ row.label }}</dt>
-              <dd class="m-0 text-sm text-ink">{{ row.value }}</dd>
+              <dd class="m-0 text-[15px] font-semibold text-ink">{{ row.value }}</dd>
             </div>
           </dl>
-          <a
-            :href="`mailto:${contact.giveEmail}`"
-            class="mt-6 inline-block text-[15px] font-semibold text-green-600"
-            >{{ contact.giveEmail }}</a
-          >
         </div>
       </div>
     </div>
@@ -59,13 +54,12 @@
 
 <script setup lang="ts">
 const give = useGive();
-const { bank, contact } = useAppConfig();
+const { bank } = useAppConfig();
 
 const rows = [
   { label: "Bank", value: bank.name },
   { label: "Account name", value: bank.accountName },
   { label: "Account number", value: bank.accountNumber },
-  { label: "Reference", value: "Your name" },
 ];
 
 onMounted(() => {
