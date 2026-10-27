@@ -5,7 +5,7 @@
         <div class="max-w-[820px]">
           <p class="eyebrow mb-4">Contact</p>
           <h1 class="h-display mb-4">Talk to us</h1>
-          <p class="lead">Partnerships, volunteering, giving, or press — tell us which and we will route your message to the right person.</p>
+          <p class="lead">Whether you want to partner, volunteer, donate, or make a press enquiry, tell us how we can help. We will direct your message to the right person.</p>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
             </button>
           </div>
 
-          <h2 class="m-0 mb-3 font-sans text-xl font-semibold text-ink">Social</h2>
+          <h2 class="m-0 mb-3 font-sans text-xl font-semibold text-ink">Follow us</h2>
           <div class="flex flex-wrap gap-5 text-[15px]">
             <a :href="social.facebook" class="text-green-600">Facebook</a>
             <a :href="social.instagram" class="text-green-600">Instagram</a>
@@ -108,7 +108,7 @@
             </span>
             <h2 class="m-0 mb-2.5 font-serif text-[clamp(21px,5vw,26px)] font-semibold text-ink">Message sent</h2>
             <p class="mb-6">Thank you. We will reply within two working days.</p>
-            <button class="btn-secondary !py-3 !text-[15px]" @click="sent = false">Send another</button>
+            <button class="btn-secondary !py-3 !text-[15px]" @click="sent = false">Send another message</button>
           </div>
         </div>
       </div>
@@ -118,8 +118,11 @@
       <div class="wrap">
         <div class="flex h-[clamp(240px,50vw,360px)] flex-col items-center justify-center gap-2.5 rounded-[10px] border border-dashed border-line-strong bg-sand-50 p-6 text-center">
           <span class="text-muted"><AppIcon name="mapPin" :size="32" /></span>
-          <p class="m-0 font-semibold text-ink">Embedded map placeholder</p>
-          <p class="m-0 max-w-[420px] text-sm text-muted">Drop the Google Maps or OpenStreetMap iframe here once the office address is confirmed.</p>
+          <p class="m-0 font-semibold text-ink">Our office</p>
+          <address class="m-0 max-w-[420px] text-sm not-italic text-muted">
+            {{ contact.addressLine1 }}<br />{{ contact.addressLine2 }}
+          </address>
+          <p class="m-0 text-sm text-muted">{{ contact.hoursNote }}.</p>
         </div>
       </div>
     </section>
@@ -158,7 +161,7 @@ async function submit() {
 }
 
 useSeoMeta({
-  title: 'Contact Bridge of Hope — Partner, volunteer, or give',
+  title: 'Contact Bridge of Hope — Partner, volunteer, or donate',
   description: 'Reach us for partnerships, volunteering, giving, or press. Office hours Mon–Fri, 9:00–17:00 WAT.'
 })
 </script>

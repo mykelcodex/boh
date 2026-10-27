@@ -8,8 +8,8 @@
           <p class="lead">
           Each programme runs inside juvenile centres and correctional
           facilities, and continues after release. Together they cover skills,
-          schooling, work, leadership, healing, reform, and the community a
-          young person returns to.
+          schooling, work, leadership, healing, reform, and support from the
+          communities young people return to.
           </p>
         </div>
       </div>
@@ -22,7 +22,7 @@
           <h2 class="h-section mb-4">Support from custody to community life</h2>
           <p class="lead">
             Bridge of Hope provides practical, lawful, and rehabilitative
-            support for young people in juvenile centres, and stays involved
+            support for young people in juvenile centres and stays involved
             after release so progress does not end at the gate.
           </p>
         </div>
@@ -108,7 +108,7 @@
       <div class="wrap max-w-[900px] text-center">
         <p class="eyebrow mb-4 !text-gold-500">Support a programme</p>
         <h2 class="h-section mb-4 !text-white">
-          Back one programme, or bring your organisation in
+          Support a programme or get your organisation involved
         </h2>
         <p class="lead mx-auto mb-9 max-w-[620px] !text-green-200">
           Fund a trade workshop, sponsor exam fees for a cohort, mentor a
@@ -151,7 +151,7 @@ const approach = [
   {
     icon: "tool",
     title: "Training and follow-up",
-    body: "We provide trade training, leadership development, tutoring, education support, and follow-up after rehabilitation is completed.",
+    body: "We provide trade training, leadership development, tutoring, educational support, and follow-up after rehabilitation.",
   },
 ];
 

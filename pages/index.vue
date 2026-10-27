@@ -3,17 +3,17 @@
     <div class="bg-gradient-to-b from-green-50 to-white">
       <div class="wrap grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
         <div>
-          <p class="eyebrow mb-[18px]">Empowering youth, changing futures</p>
+          <p class="eyebrow mb-[18px]">Education, mentorship, and reintegration</p>
           <h1 class="h-display">Empowering Youth, Changing Futures</h1>
           <p class="lead mt-5 max-w-[560px]">
-            At Bridge of Hope, we believe every young person deserves a second chance. Through mentorship, education, and restorative programmes inside juvenile centres, we provide the tools necessary for rehabilitation and successful reentry into society.
+            At Bridge of Hope, we believe every young person deserves a second chance. Through mentorship, education, and restorative programmes in juvenile centres and correctional facilities, we support young people through rehabilitation and their successful return to their communities.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <button class="btn-gold" @click="give.open()">
-              Support a Youth Today
+              Support a young person today
               <AppIcon name="arrowRight" :size="18" />
             </button>
-            <NuxtLink to="/contact" class="btn-green no-underline">Become a Mentor</NuxtLink>
+            <NuxtLink to="/contact" class="btn-green no-underline">Become a mentor</NuxtLink>
           </div>
           <div class="mt-9 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
             <span>7 programme areas</span>
@@ -64,7 +64,7 @@
       <div class="wrap max-w-[820px] text-center">
         <p class="eyebrow mb-4">Who we are</p>
         <p class="m-0 font-serif text-[clamp(19px,4.4vw,26px)] leading-[1.45] text-ink">
-          Bridge of Hope works inside juvenile centres and correctional facilities across Nigeria, where young people are held with little access to schooling, skills, or support. We run education and vocational programmes on the inside, and stay with each young person through release, work, and return to community life. Our work is built on the belief that a sentence should not decide a future.
+          Bridge of Hope works inside juvenile centres and correctional facilities across Nigeria, where young people are held with little access to schooling, skills, or support. We run educational and vocational programmes inside these facilities and stay with each young person through release, employment, and reintegration into community life. Our work is built on the belief that a sentence should not decide a future.
         </p>
       </div>
     </section>
@@ -102,7 +102,7 @@
       <div class="wrap">
         <p class="eyebrow mb-3 !text-gold-500">Impact</p>
         <h2 class="h-section !text-white">What the work adds up to</h2>
-        <p class="lead mb-12 mt-3 max-w-[620px] !text-green-200">The difference our programmes make for young people, year on year.</p>
+        <p class="lead mb-12 mt-3 max-w-[620px] !text-green-200">The difference our programmes make in young people's lives each year.</p>
         <div class="grid gap-px overflow-hidden rounded-[10px] border border-white/15 bg-white/15 sm:grid-cols-2 lg:grid-cols-3">
           <div v-for="s in stats" :key="s.label" class="bg-green-700 px-7 py-8">
             <div class="font-serif text-[clamp(38px,8vw,52px)] leading-none text-gold-500">{{ s.value }}</div>
@@ -126,7 +126,7 @@
       <div class="wrap flex flex-wrap items-center justify-between gap-10">
         <div class="max-w-[560px]">
           <h2 class="m-0 mb-3 font-serif text-[clamp(26px,5.4vw,36px)] font-semibold leading-tight text-white">Stand with a young person's second chance</h2>
-          <p class="m-0 text-[17px] leading-[1.55] text-green-100">Give, give your time, or bring your organisation in as a partner. Every route matters.</p>
+          <p class="m-0 text-[17px] leading-[1.55] text-green-100">Donate, volunteer, or partner with us. Every form of support matters.</p>
         </div>
         <div class="flex flex-wrap gap-3">
           <button class="btn-gold" @click="give.open()">Donate</button>
@@ -152,15 +152,15 @@ const heroImages = [
   },
   {
     src: 'https://images.pexels.com/photos/12804469/pexels-photo-12804469.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    alt: 'A teacher mentoring Nigerian youth students in Port Harcourt'
+    alt: 'A teacher mentoring young Nigerian students in Port Harcourt'
   },
   {
     src: 'https://unsplash.com/photos/XbGLZgfzp0g/download?force=true&w=1200',
-    alt: 'Young men studying together in a Lagos library tutoring session'
+    alt: 'Young men studying together during a tutoring session in a Lagos library'
   },
   {
     src: 'https://unsplash.com/photos/IgUR1iX0mqM/download?force=true&w=1200',
-    alt: 'Young adults learning together at a Lagos skills and rehabilitation workshop'
+    alt: 'Young adults learning together at a skills and rehabilitation workshop in Lagos'
   }
 ]
 
@@ -183,8 +183,8 @@ onMounted(() => {
 
 const stats = [
   { value: '85%', label: 'Graduates report improved conflict-resolution skills' },
-  { value: '500+', label: 'Youth mentored and supported annually' },
-  { value: '12', label: 'Partnering juvenile facilities across the state' }
+  { value: '500+', label: 'Young people mentored and supported each year' },
+  { value: '12', label: 'Juvenile facilities partnering with us across the state' }
 ]
 
 useSeoMeta({

@@ -10,8 +10,8 @@ export const programmes = [
   {
     n: '02',
     icon: 'book',
-    title: 'Formal schooling access',
-    short: 'Literacy, primary and secondary completion, and exam registration inside custody.',
+    title: 'Access to formal education',
+    short: 'Literacy, primary and secondary completion, and exam registration while in custody.',
     body: 'Open and sustain routes back into formal education through tutoring, literacy and numeracy support, primary and secondary completion, and registration for national examinations. The goal is for every young person to leave custody or rehabilitation with a school record and learning plan they can build on.'
   },
   {
@@ -32,7 +32,7 @@ export const programmes = [
     n: '05',
     icon: 'heart',
     title: 'Rehabilitation & social reintegration',
-    short: 'Counselling, family mediation, and case follow-up through release and after.',
+    short: 'Counselling, family mediation, and case follow-up before and after release.',
     body: 'Support the return home with counselling, family mediation, transitional shelter planning, and case follow-up. Bridge of Hope is also working toward a rehabilitation centre for young people who have no safe place to go after release, so reintegration can begin with stability instead of isolation.'
   },
   {
@@ -47,7 +47,7 @@ export const programmes = [
     icon: 'megaphone',
     title: 'Community awareness & engagement',
     short: 'School talks, community forums, and employer engagement that replace stigma with support.',
-    body: 'Change how communities receive returning youth through school talks, faith and community forums, and employer engagement that replaces stigma with practical support.'
+    body: 'Change how communities receive young people returning home through school talks, faith and community forums, and employer engagement that replaces stigma with practical support.'
   }
 ] as const
 
@@ -61,7 +61,7 @@ export const coreValues = [
 ] as const
 
 export const visionStatement =
-  'Our vision is a Nigeria where every young person regardless of their past has the opportunity, skills, and support to build a dignified life, contribute meaningfully to society, and emerge as empowered leaders who strengthen their communities and shape a safer, more prosperous nation.'
+  'Our vision is a Nigeria where every young person, regardless of their past, has the opportunity, skills, and support to build a dignified life, contribute meaningfully to society, and emerge as an empowered leader who strengthens their community and helps shape a safer, more prosperous nation.'
 
 export const missionStatement =
-  'Our mission is to empower young people in juvenile Centers and Correctional facilities across Nigeria by providing access to quality education, vocational training, leadership development, and pathways to meaningful employment. We are committed to transforming lives through rehabilitation, mentorship, and community reintegration, equipping every youth with the skills, confidence,'
+  'Our mission is to empower young people in juvenile centres and correctional facilities across Nigeria by providing access to quality education, vocational training, leadership development, and pathways to meaningful employment. We are committed to changing lives through rehabilitation, mentorship, and community reintegration, equipping every young person with the skills, confidence, and support to build a dignified, independent future.'

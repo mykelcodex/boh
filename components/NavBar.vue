@@ -28,7 +28,7 @@
       <button
         class="flex h-11 w-11 cursor-pointer items-center justify-center rounded-[4px] border border-line-strong bg-white text-green-700 lg:hidden"
         :aria-expanded="menuOpen"
-        aria-label="Menu"
+        :aria-label="menuOpen ? 'Close menu' : 'Open menu'"
         @click="menuOpen = !menuOpen"
       >
         <AppIcon :name="menuOpen ? 'close' : 'menu'" :size="20" />

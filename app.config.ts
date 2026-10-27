@@ -6,8 +6,8 @@ export default defineAppConfig({
   programsLayout: "cards" as "cards" | "accordion",
 
   contact: {
-    addressLine1: "Street address placeholder, Area",
-    addressLine2: "City, State, Nigeria",
+    addressLine1: "156 Old Ojo Road",
+    addressLine2: "Amuwo Odofin, Lagos, Nigeria",
     phone: "+234 902 556 2798",
     email: "hello@bohreform.org",
     partnersEmail: "partners@bohreform.org",

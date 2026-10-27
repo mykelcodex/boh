@@ -25,7 +25,7 @@
           </div>
           <button
             class="cursor-pointer p-1 text-muted"
-            aria-label="Close"
+            aria-label="Close bank transfer details"
             @click="give.close()"
           >
             <AppIcon name="close" :size="22" />

@@ -93,7 +93,7 @@
         <div class="aspect-[4/5] overflow-hidden rounded-[10px] shadow-e3">
           <img
             src="/images/hope.png"
-            alt="A young person in a prison uniform gripping cell bars, the word HOPE written across their fingers"
+            alt="A young person in a prison uniform grips cell bars, with the word HOPE written across their fingers"
             class="block h-full w-full object-cover"
           />
         </div>
@@ -132,7 +132,7 @@
       <div class="wrap">
         <p class="eyebrow mb-3">Partners &amp; affiliations</p>
         <h2 class="h-section mb-3">Who we work with</h2>
-        <p class="lead mb-8 max-w-[620px]">We partner across the sectors that make rehabilitation and reentry possible — justice, education, mental health, and philanthropy.</p>
+        <p class="lead mb-8 max-w-[620px]">We partner across the sectors that make rehabilitation and reintegration possible: justice, education, mental health, and philanthropy.</p>
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
           <div
             v-for="partner in partnerCategories"
