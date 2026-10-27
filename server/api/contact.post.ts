@@ -1,3 +1,5 @@
+import { Resend } from 'resend'
+
 const SUBJECTS = ['General enquiry', 'Partner with us', 'Volunteer', 'Donate']
 
 export default defineEventHandler(async (event) => {
@@ -21,10 +23,18 @@ export default defineEventHandler(async (event) => {
   if (!SUBJECTS.includes(subject)) throw createError({ statusCode: 422, message: 'Please choose a subject.' })
   if (!message || message.length > 4000) throw createError({ statusCode: 422, message: 'Please enter a message.' })
 
-  await appendRecord('.data/contact-messages.ndjson', { name, email, subject, message })
+  const config = useRuntimeConfig(event)
+  if (!config.resendApiKey) {
+    throw createError({ statusCode: 503, message: 'Message delivery is temporarily unavailable. Please email us directly.' })
+  }
 
-  // TODO: route by subject — partners@, volunteer@, give@, else hello@ — via your
-  // transactional email provider (Resend, Postmark, SES).
+  try {
+    const resend = new Resend(config.resendApiKey)
+    await sendContactEmail(resend, { name, email, subject, message })
+  } catch (error) {
+    console.error('Contact email delivery failed', error)
+    throw createError({ statusCode: 502, message: 'We could not send your message. Please try again or email us directly.' })
+  }
 
   return { ok: true }
 })

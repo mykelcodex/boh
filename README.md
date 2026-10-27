@@ -51,14 +51,15 @@ Repeated patterns are component classes in the same file: `.wrap`, `.section`,
 
 ## Forms
 
-`POST /api/contact` and `POST /api/newsletter` validate, rate-limit (5/min per IP),
-and append to `.data/*.ndjson` so nothing is lost before a database exists.
-The contact endpoint also carries a honeypot field. Swap `appendRecord` in
-`server/utils/store.ts` for your database, and add the transactional email send
-(Resend, Postmark, SES) where the TODO sits in `server/api/contact.post.ts`.
+`POST /api/contact` and `POST /api/newsletter` validate and rate-limit submissions
+(5/min per IP). The contact endpoint also carries a honeypot field and sends
+valid messages to `hello@bohreform.org` through Resend. Set the server-only
+`NUXT_RESEND_API_KEY` environment variable in Netlify; never commit the key.
 
-For a fully static deploy (`npm run generate`), point the two forms at a form
-service or a serverless function instead — Nitro API routes need a Node host.
+Netlify runs the Nuxt server through its Nitro function preset so the API routes
+remain available. The newsletter endpoint still writes to `.data/*.ndjson`,
+which is suitable for local development only; replace it with durable storage
+before collecting production subscriptions.
 
 ## Before launch
 

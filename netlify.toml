@@ -5,8 +5,3 @@
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--include=dev"
-
-[[redirects]]
-  from = "/*"
-  to = "/200.html"
-  status = 200
