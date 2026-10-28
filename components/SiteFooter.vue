@@ -9,12 +9,6 @@
           <p class="mb-5 max-w-[300px] text-[15px] leading-relaxed text-green-200">
             Empowering young people in juvenile centres and correctional facilities across Nigeria — through education, training, and reintegration.
           </p>
-          <div class="flex flex-wrap gap-x-[18px] gap-y-2 text-sm">
-            <a :href="social.facebook" class="text-white">Facebook</a>
-            <a :href="social.instagram" class="text-white">Instagram</a>
-            <a :href="social.linkedin" class="text-white">LinkedIn</a>
-            <a :href="social.x" class="text-white">X</a>
-          </div>
         </div>
 
         <div>
@@ -69,7 +63,7 @@
 </template>
 
 <script setup lang="ts">
-const { contact, social } = useAppConfig()
+const { contact } = useAppConfig()
 const year = new Date().getFullYear()
 const email = ref('')
 const subscribed = ref(false)

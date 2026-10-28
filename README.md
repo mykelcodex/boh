@@ -17,7 +17,7 @@ Node 20+.
 ## Structure
 
 ```
-app.config.ts              editable content: contact details, bank details, socials, team,
+app.config.ts              editable content: contact details, bank details, team,
                            and programsLayout ('cards' | 'accordion')
 assets/css/main.css        Tailwind v4 @theme tokens + a handful of component classes
 utils/content.ts           programme copy, core values, mission and vision statements
@@ -64,8 +64,7 @@ before collecting production subscriptions.
 ## Before launch
 
 1. Add `public/images/hero.jpg` and `public/images/story.jpg`.
-2. Fill real contact, bank, and social values in `app.config.ts`.
+2. Fill real contact and bank values in `app.config.ts`.
 3. Complete the mission statement in `utils/content.ts` (the supplied text ends
    mid-sentence) and replace the founding story, impact numbers, and testimonials.
 4. Add team members to `app.config.ts` — the leadership section stays hidden while empty.
-5. Replace the map placeholder on `/contact` with a real embed.

@@ -17,13 +17,6 @@ export default defineAppConfig({
     hoursNote: "Facility visits by appointment",
   },
 
-  social: {
-    facebook: "#",
-    instagram: "#",
-    linkedin: "#",
-    x: "#",
-  },
-
   bank: {
     name: "Zenith Bank Plc",
     accountName: "Bridge of Hope Juvenile Reformation and Capacity Development Initiative",
