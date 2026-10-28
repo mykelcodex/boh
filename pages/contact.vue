@@ -27,47 +27,6 @@
             </div>
           </dl>
 
-          <h2 class="m-0 mb-4 font-sans text-xl font-semibold text-ink">Direct routes</h2>
-          <div class="mb-8 grid gap-3">
-            <a
-              :href="`mailto:${contact.partnersEmail}`"
-              class="flex items-center justify-between gap-3 rounded-md border border-line bg-white px-[18px] py-4 no-underline shadow-e1 transition-colors duration-150 hover:bg-sand-50"
-            >
-              <span>
-                <span class="block text-[15px] font-semibold text-ink">Partner with us</span>
-                <span class="block text-sm text-muted">{{ contact.partnersEmail }}</span>
-              </span>
-              <AppIcon name="arrowRight" :size="18" class="text-green-600" />
-            </a>
-            <a
-              :href="`mailto:${contact.volunteerEmail}`"
-              class="flex items-center justify-between gap-3 rounded-md border border-line bg-white px-[18px] py-4 no-underline shadow-e1 transition-colors duration-150 hover:bg-sand-50"
-            >
-              <span>
-                <span class="block text-[15px] font-semibold text-ink">Volunteer or mentor</span>
-                <span class="block text-sm text-muted">{{ contact.volunteerEmail }}</span>
-              </span>
-              <AppIcon name="arrowRight" :size="18" class="text-green-600" />
-            </a>
-            <button
-              class="flex w-full cursor-pointer items-center justify-between gap-3 rounded-md border border-gold-500 bg-gold-100 px-[18px] py-4 text-left transition-colors duration-150 hover:bg-[#F7E3C4]"
-              @click="give.open()"
-            >
-              <span>
-                <span class="block text-[15px] font-semibold text-ink">Donate</span>
-                <span class="block text-sm text-gold-ink">Bank transfer details</span>
-              </span>
-              <AppIcon name="arrowRight" :size="18" class="text-gold-ink" />
-            </button>
-          </div>
-
-          <h2 class="m-0 mb-3 font-sans text-xl font-semibold text-ink">Follow us</h2>
-          <div class="flex flex-wrap gap-5 text-[15px]">
-            <a :href="social.facebook" class="text-green-600">Facebook</a>
-            <a :href="social.instagram" class="text-green-600">Instagram</a>
-            <a :href="social.linkedin" class="text-green-600">LinkedIn</a>
-            <a :href="social.x" class="text-green-600">X</a>
-          </div>
         </div>
 
         <div class="rounded-md border border-line bg-white p-5 shadow-e2 sm:p-8">
@@ -114,24 +73,11 @@
       </div>
     </section>
 
-    <section class="pb-24">
-      <div class="wrap">
-        <div class="flex h-[clamp(240px,50vw,360px)] flex-col items-center justify-center gap-2.5 rounded-[10px] border border-dashed border-line-strong bg-sand-50 p-6 text-center">
-          <span class="text-muted"><AppIcon name="mapPin" :size="32" /></span>
-          <p class="m-0 font-semibold text-ink">Our office</p>
-          <address class="m-0 max-w-[420px] text-sm not-italic text-muted">
-            {{ contact.addressLine1 }}<br />{{ contact.addressLine2 }}
-          </address>
-          <p class="m-0 text-sm text-muted">{{ contact.hoursNote }}.</p>
-        </div>
-      </div>
-    </section>
   </main>
 </template>
 
 <script setup lang="ts">
-const give = useGive()
-const { contact, social } = useAppConfig()
+const { contact } = useAppConfig()
 
 const details = [
   { icon: 'mapPin', label: 'Office', value: contact.addressLine1, value2: contact.addressLine2 },
