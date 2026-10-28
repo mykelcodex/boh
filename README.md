@@ -25,7 +25,7 @@ components/                NavBar, SiteFooter, GiveModal, AppIcon
 composables/useGive.ts     donate-modal open/close state (useState, SSR-safe)
 layouts/default.vue        nav + page + footer + modal
 pages/                     index, about, what-we-do, contact
-server/api/                contact.post.ts, newsletter.post.ts
+server/api/                contact.post.ts
 public/assets/             logo files
 public/images/             hero.jpg and story.jpg go here
 ```
@@ -51,15 +51,13 @@ Repeated patterns are component classes in the same file: `.wrap`, `.section`,
 
 ## Forms
 
-`POST /api/contact` and `POST /api/newsletter` validate and rate-limit submissions
-(5/min per IP). The contact endpoint also carries a honeypot field and sends
-valid messages to `hello@bohreform.org` through Resend. Set the server-only
+`POST /api/contact` validates and rate-limits submissions (5/min per IP). The
+endpoint also carries a honeypot field and sends valid messages to
+`hello@bohreform.org` through Resend. Set the server-only
 `NUXT_RESEND_API_KEY` environment variable in Netlify; never commit the key.
 
 Netlify runs the Nuxt server through its Nitro function preset so the API routes
-remain available. The newsletter endpoint still writes to `.data/*.ndjson`,
-which is suitable for local development only; replace it with durable storage
-before collecting production subscriptions.
+remain available.
 
 ## Before launch
 
